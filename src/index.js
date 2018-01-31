@@ -17,6 +17,14 @@ const playlists = [
     cover: "//is5-ssl.mzstatic.com/image/thumb/Music/v4/24/44/80/244480d4-3b14-111e-759c-290e583045cd/source/300x300cc.jpg",
   },
   {
+    artistName: "Bad Bunny",
+    id: "342234234",
+    releaseDate: "2017-01-14",
+    name: "Soy Peor",
+    mp3:"//audio-ssl.itunes.apple.com/apple-assets-us-std-000001/AudioPreview122/v4/c7/97/bd/c797bd82-dd83-f4e6-3fcf-21167148c611/mzaf_8462424298566779199.plus.aac.ep.m4a",
+    cover:"//is1-ssl.mzstatic.com/image/thumb/Music122/v4/6f/a5/2c/6fa52ce1-086a-5ed1-3bd1-b37bf0e35c02/source/300x300cc.jpg"
+  },
+  {
     artistName: "DJ Khaled",
     id: "1340309499",
     releaseDate: "2018-01-26",
