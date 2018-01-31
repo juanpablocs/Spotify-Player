@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <!--
+    manifest.json provides metadata used when your web app is added to the
+    homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+  -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+  <!--
+    Notice the use of %PUBLIC_URL% in the tags above.
+    It will be replaced with the URL of the `public` folder during the build.
+    Only files inside the `public` folder can be referenced from the HTML.
+
+    Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+    work correctly both with client-side routing and a non-root public URL.
+    Learn how to configure a non-root public URL by running `npm run build`.
+  -->
+  <title>React App</title>
+  
+</head>
+<body>
+  <link rel="stylesheet" type="text/css" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+<style>
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+  body{
+    background:#333;
+    color:#777;
+  }
+  progress{
+    width:200px;
+    height:18px;
+  }
+  button{
+    border:0;
+  }
+  button[disabled]{
+    opacity:.5;
+  }
+  .button__play,.button__pause{
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:flex;
+    justify-content:center;
+    border-radius:100%;
+    font-size:18px;
+    color:white;
+    background:transparent;
+    border:1px solid white;
+    margin:0 5px;
+    cursor:pointer;
+  }
+  .button__play .icon{ position:relative; right:-1px; }
+  .button__prev,.button__next{
+    width:30px;
+    height:30px;
+    font-size:18px;
+    background:transparent;
+    color:white;
+    cursor:pointer;
+  }
+  .control-buttons{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:50px;
+    line-height:50px;
+    margin-top:10px;
+  }
+  .songName{
+    color:white;
+    margin:5px 0;
+    
+  }
+  .artistName{
+    font-size:13px;
+    color:#999;
+    margin-bottom:10px;
+  }
+  .duration{
+    display:flex;
+    justify-content:space-between;
+    font-size:12px;
+  }
+  .player{
+    display:flex;
+	  width:300px;
+    flex-direction:column;
+    margin:10px auto;
+  }
+  .progress{
+    display:flex;
+    position:relative;
+    height:4px;
+    background:rgba(255,255,255,0.1);
+    border-radius:20px;
+    margin: 5px 0;
+  }
+  .progress__bar{
+    background:white;
+    height:4px;
+    width:0;
+	  border-radius:20px;
+  }
+</style>
+<div id="root"></div>
+  <!--
+    This HTML file is a template.
+    If you open it directly in the browser, you will see an empty page.
+
+    You can add webfonts, meta tags, or analytics to this file.
+    The build step will place the bundled scripts into the <body> tag.
+
+    To begin the development, run `npm start` or `yarn start`.
+    To create a production bundle, use `npm run build` or `yarn build`.
+  -->
+</body>
+</html>
