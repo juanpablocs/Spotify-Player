@@ -58,10 +58,6 @@ export default class Player extends Component {
     this.setState({ duration: this.state.audio.duration });
   }
 
-  onPause() {
-    this.setState({ isPlaying: false });
-  }
-
   onTimer(e) {
     this.setState({
       currentTime: this.audio.currentTime
@@ -70,6 +66,10 @@ export default class Player extends Component {
 
   onPlaying() {
     this.setState({ isPlaying: true });
+  }
+
+  onPause() {
+    this.setState({ isPlaying: false });
   }
 
   render() {
