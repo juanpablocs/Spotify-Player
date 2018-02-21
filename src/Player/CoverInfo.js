@@ -31,6 +31,10 @@ export default class CoverInfo extends React.Component {
   render() {
     return (
       <div>
+        <div
+          className="cover--poster"
+          style={{ backgroundImage: `url(${this.props.src})` }}
+        />
         <div className="cover">
           <img width="100%" alt={this.props.song} src={this.state.cover} />
         </div>
