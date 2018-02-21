@@ -4,8 +4,7 @@ export default class CoverInfo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      cover:
-        "data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs="
+      cover: null
     };
   }
 
@@ -20,6 +19,10 @@ export default class CoverInfo extends React.Component {
   }
 
   createCover(src) {
+    this.setState({
+      cover:
+        "data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs="
+    });
     const img = new Image();
     img.src = src;
     img.onload = _ => this.setState({ cover: src });
