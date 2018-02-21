@@ -20,6 +20,10 @@ export default class Player extends Component {
     this.onPlaying = this.onPlaying.bind(this);
     this.onPause = this.onPause.bind(this);
     this.onLoadedMetadata = this.onLoadedMetadata.bind(this);
+    this.playAction = this.playAction.bind(this);
+    this.pauseAction = this.pauseAction.bind(this);
+    this.prevAction = this.prevAction.bind(this);
+    this.nextAction = this.nextAction.bind(this);
   }
 
   nextAction() {
@@ -40,6 +44,14 @@ export default class Player extends Component {
       currentTime: 0
     });
     this.audioLoad();
+  }
+
+  pauseAction() {
+    this.state.audio.pause();
+  }
+
+  playAction() {
+    this.state.audio.play();
   }
 
   audioLoad() {
@@ -89,8 +101,10 @@ export default class Player extends Component {
           audio={this.state.audio}
           playlistPosition={position}
           playlistTotal={this.props.playlists.length}
-          prevAction={this.prevAction.bind(this)}
-          nextAction={this.nextAction.bind(this)}
+          prevAction={this.prevAction}
+          nextAction={this.nextAction}
+          playAction={this.playAction}
+          pauseAction={this.pauseAction}
           isPlaying={this.state.isPlaying}
         />
 

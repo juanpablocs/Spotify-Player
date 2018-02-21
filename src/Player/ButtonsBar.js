@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { ButtonPlay, ButtomPause, ButtonPrev, ButtonNext } from "./Buttons";
+import { ButtonPlay, ButtonPause, ButtonPrev, ButtonNext } from "./Buttons";
 
 export default props => {
   return (
@@ -10,9 +10,9 @@ export default props => {
         prevAction={props.prevAction}
       />
       {props.isPlaying ? (
-        <ButtomPause audio={props.audio} />
+        <ButtonPause pauseAction={props.pauseAction} />
       ) : (
-        <ButtonPlay audio={props.audio} />
+        <ButtonPlay playAction={props.playAction} />
       )}
       <ButtonNext
         playlistPosition={props.playlistPosition}
