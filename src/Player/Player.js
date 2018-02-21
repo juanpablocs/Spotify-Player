@@ -7,14 +7,14 @@ import ProgressBar from "./ProgressBar";
 export default class Player extends Component {
   constructor(props) {
     super(props);
+    
     this.state = {
       isPlaying: false,
       position: 0,
-      audio: null,
       duration: 0,
       currentTime: 0
     };
-    this.playlist = props.playlists[this.state.position];
+
     //binds
     this.onTimer = this.onTimer.bind(this);
     this.onPlaying = this.onPlaying.bind(this);
@@ -47,27 +47,23 @@ export default class Player extends Component {
   }
 
   pauseAction() {
-    this.state.audio.pause();
+    this.audio.pause();
   }
 
   playAction() {
-    this.state.audio.play();
+    this.audio.play();
   }
 
   audioLoad() {
-    this.state.audio.pause();
+    this.audio.pause();
     setTimeout(() => {
-      this.state.audio.load();
-      this.state.audio.play();
+      this.audio.load();
+      this.audio.play();
     }, 500);
   }
 
-  componentDidMount() {
-    this.setState({ audio: this.audio });
-  }
-
   onLoadedMetadata() {
-    this.setState({ duration: this.state.audio.duration });
+    this.setState({ duration: this.audio.duration });
   }
 
   onTimer(e) {
@@ -98,7 +94,6 @@ export default class Player extends Component {
         />
 
         <ButtonsBar
-          audio={this.state.audio}
           playlistPosition={position}
           playlistTotal={this.props.playlists.length}
           prevAction={this.prevAction}
